@@ -1,0 +1,34 @@
+{
+  "interval_seconds": 3,
+  "channels": ["System", "Security", "Windows PowerShell", "ProcessWatcher"],
+  "alerts": {
+    "enabled_channels": [],
+    "telegram": {
+      "token": "",
+      "chat_id": ""
+    },
+    "discord": {
+      "webhook_url": ""
+    },
+    "email": {
+      "smtp_server": "",
+      "smtp_port": 587,
+      "username": "",
+      "password": "",
+      "to": ""
+    }
+  },
+  "thresholds": {
+    "brute_force_failures": 2,
+    "brute_force_window_minutes": 10,
+    "usb_debounce_seconds": 8,
+    "powershell_min_base64_len": 24,
+    "process_monitoring_enabled": true
+  },
+  "database": {
+    "path": "data/siem.db"
+  },
+  "export": {
+    "latest_events_json": "data/latest_events.json"
+  }
+}
